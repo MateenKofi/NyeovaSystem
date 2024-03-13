@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* Mobile navigation */
+.mobile-nav {
+    position: fixed;
+    margin-left: 10rem;
+    z-index: 40;
+    width: 90%;
+    height: 100%;
+    background-color: #fcfeff; /* Adjust color as needed */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    transition: transform 0.7s ease; /* Using transition for smooth animation */
+  }
+  
+  /* Hide the menu off-screen when toggleMenu is false */
+  .mobile-nav.hidden {
+    transform: translateX(150%);
+  }
+  
+  /* Show the menu when toggleMenu is true */
+  .mobile-nav.visible {
+    transform: translateX(0);
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    padding: 0 16px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .nav-links a {
+    display: block;
+    font-weight: bold;
+    color: #4b5563; /* Adjust color as needed */
+    text-decoration: none;
+    padding: 12px 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .nav-links a:hover {
+    color: #2d3748; /* Adjust hover color as needed */
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 6px; /* Adjust margin as needed */
+    margin-bottom: 6px; /* Adjust margin as needed */
+    padding-left: 16px; /* Adjust padding as needed */
+  }
+  
+  .logo a {
+    font-weight: bold;
+    color: #4b5563; /* Adjust color as needed */
+    text-decoration: none;
+  }
+  
