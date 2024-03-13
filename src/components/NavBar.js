@@ -13,7 +13,7 @@ function NavBar() {
   };
 
   return (
-    <div className='w-full fixed '>
+    <div className='w-full  bg-white/80  z-50 lg:fixed md:fixed sm:fixed '>
       <nav>
         <div className='max-w-7xl mx-auto'>
           <div className='flex mx-auto justify-between w-5/6'>
