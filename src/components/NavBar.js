@@ -38,7 +38,7 @@ function NavBar() {
           <div className='nav-links'>
             <a href=' '>Home</a>
             <a href=' '>About</a>
-            <a href=' '>Produc</a>
+            <a href=' '>Product</a>
             <a href=' '>solution</a>
             <a href=' '>Team</a>
             <a href=' '>Contact</a>

@@ -31,16 +31,19 @@
     padding: 0 16px;
     height: 90vh;
     display: flex;
+    gap:0.2rem;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
   }
   
   .nav-links a {
-    display: block;
+    display:block;
     font-weight: bold;
+    font-size: 2rem;
     color: #4b5563; /* Adjust color as needed */
     text-decoration: none;
-    padding: 12px 0;
+    padding: 12px 12px;
     transition: color 0.3s ease; /* Smooth color transition */
   }
   
