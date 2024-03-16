@@ -4,19 +4,24 @@ import image2 from '../assets/images/landing/2.png';
 import image3 from '../assets/images/landing/3.png';
 import image4 from '../assets/images/landing/4.png';
 import TextAnimation from './animations/TextAnimation';
+import SlideInFromRight from './animations/SlideInFromRight';
+import SlideInFromLeft from './animations/SlideInFromLeft';
 
 const TextImage = () => {
   return (
-    <div className="my-10">
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="flex justify-center md:w-1/2 md:hidden">
+    <div className="my-10 grid place-items-center">
+      <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex justify-center md:w-1/2 md:hidden ">
+          <SlideInFromLeft>
           <img
             src={image1}
+            loading='lazy'
             alt="elevate your business"
             height={400}
             width={400}
             className="w-4/5 border-4 border-black/90 md:border-0 md:w-full"
           />
+          </SlideInFromLeft>
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
@@ -34,26 +39,32 @@ const TextImage = () => {
             </TextAnimation>
           </div>
         </div>
-        <div className="hidden justify-center md:w-1/2  md:flex">
+        <div className="hidden justify-center md:w-1/2  md:flex  overflow-hidden">
+          <SlideInFromLeft>
           <img
             src={image1}
+            loading='lazy'
             alt="elevate your business"
             height={400}
             width={400}
             className="w-full lg:w-full border-4 border-black/90 md:border-0"
           />
+          </SlideInFromLeft>
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex justify-center md:w-1/2">
+          <SlideInFromRight>
           <img
             src={image2}
+            loading='lazy'
             alt="conception "
             height="400"
             width="400"
             className="w-4/5 border-4 border-black/90 md:border-0 md:w-full"
           />
+          </SlideInFromRight>
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
@@ -75,13 +86,16 @@ const TextImage = () => {
 
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex justify-center md:w-1/2 md:hidden">
+          <SlideInFromLeft>
           <img
             src={image3}
+            loading='lazy'
             alt="elevate your business"
             height={400}
             width={400}
             className="w-4/5 border-4 border-black/90 md:border-0 md:w-full"
           />
+          </SlideInFromLeft>
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
@@ -98,39 +112,61 @@ const TextImage = () => {
           </div>
         </div>
         <div className="hidden justify-center md:w-1/2  md:flex">
+        <SlideInFromLeft>
           <img
             src={image3}
+            loading='lazy'
             alt="elevate your business"
             height={400}
             width={400}
             className="w-full lg:w-full border-4 border-black/90 md:border-0"
           />
+          </SlideInFromLeft>
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex justify-center md:w-1/2">
+          <SlideInFromRight>
           <img
             src={image4}
+            loading='lazy'
             alt="conception "
             height="400"
             width="400"
             className="w-4/5 border-4 border-black/90 md:border-0 md:w-full"
           />
+          </SlideInFromRight>
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
-          <div className="w-9/12">
-            <TextAnimation>
-            <h4 className="text-4xl font-serif py-4">Conception</h4>
-            <p>
-              Since conception, we have had a host of applications in
-              development various markets. We also provide network architecture
-              and network administration using enterprise-level brands of
-              hardware and software. At Nyeova Systems, we are able to purchase,
-              configure, install, and manage this hardware for you and your
-              company at a fraction of the cost of maintaining a full IT
-              department.
-            </p>
+          <div
+            className="w-9/12"
+            // style={{opacity: 0; transform: scale(0.5) ,translateZ(0)}}
+            >
+              <TextAnimation>
+            <h4 className='text-[3.4em]'>Development Expertise</h4>
+            <div>
+              At Nyeova Systems, we bring our world class development and
+              project management knowledge together by bringing your
+              applications to life in the following disciplines:
+              <p className="my-4">
+                <span className="font-semibold">System software</span> to provide
+                core functions such as operating systems,disk management,
+                utilities, hardware management and other operational
+                necessities.
+              </p>
+              <p className="my-4">
+                <span className="font-semibold">Programming software</span> to give
+                programmers tools such as text editors, compilers, linkers,
+                debuggers and other tools to create code.
+              </p>
+              <p className="my-4">
+                <span className="font-semibold">Application software</span> to help
+                users and vendors perform tasks like data management software,
+                point of sales software and many more. We also work on web and
+                mobile applications like those used to shop on PigeonUltra App.
+              </p>
+            </div>
             </TextAnimation>
           </div>
         </div>

@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import TextImage from './components/TextImage';
+import NavLinks from './components/NavLinks';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/about" element={<TextImage/>} />
       </Routes>
     </div>
+    <NavLinks/>
+    <Footer/>
       </Router>  
   );
 }

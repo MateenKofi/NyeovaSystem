@@ -1,5 +1,6 @@
 import React from 'react';
 import bars from '../assets/images/bar-1.svg';
+import TextGradient from './animations/TextGradient';
 
 const HeroSection = ({ children }) => {
   return (
@@ -9,9 +10,10 @@ const HeroSection = ({ children }) => {
       {children}
         </div>
         <h1
-          className="leading-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-700 animate-text"
+          className=""
           style={{ color: 'transparent' }}>
-          Nyeova Systems
+            <TextGradient text="Nyeova Systems"/>
+          
         </ h1>
         <img
           alt="bar"

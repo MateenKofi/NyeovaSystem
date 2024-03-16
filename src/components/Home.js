@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import TextImage from './TextImage'
-
 const Home = () => {
   return (
     <div>

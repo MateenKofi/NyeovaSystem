@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from '../_next/logo.webp&w=64&q=75'
 import '../components/css/navbar.css'; 
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -26,7 +27,7 @@ function NavBar() {
             </div>
             {/* Mobile navigation toggle */}
             <div className='flex gap-4 items-center'>
-              <button className='px-4 py-2 rounded-lg bg-black text-white'>Let's Talk</button>
+              <button className='px-4 py-2 rounded-lg bg-black text-white hover:bg-white hover:shadow-xl hover:text-black transition-all duration-300 ease-in-out'>Let's Talk</button>
               <button onClick={handleToggleMenu}>
                 {toggleMenu ? <CloseIcon fontSize='large' /> : <MenuIcon fontSize='large' />}
               </button>
@@ -36,12 +37,12 @@ function NavBar() {
         {/* Mobile navigation */}
         <div className={`mobile-nav ${toggleMenu ? 'visible' : 'hidden'}`}>
           <div className='nav-links'>
-            <a href=' '>Home</a>
-            <a href=' '>About</a>
-            <a href=' '>Product</a>
-            <a href=' '>solution</a>
-            <a href=' '>Team</a>
-            <a href=' '>Contact</a>
+            <Link to={'/'}>Home</Link>
+            <Link to={'/about'}>About</Link>
+            <Link to={'/product'}>Product</Link>
+            <Link to={'/solution'}>solution</Link>
+            <Link to={'/team'}>Team</Link>
+            <Link to={'contact'}>Contact</Link>
           </div>
         </div>
       </nav>
