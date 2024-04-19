@@ -12,19 +12,23 @@ const HeroSection = ({ children }) => {
         <h1
           className=""
           style={{ color: 'transparent' }}>
-            <TextGradient text="Nyeova Systems"/>
+            <TextGradient>
+            Nyeova Systems
+            </TextGradient>
           
         </ h1>
+        <TextGradient>
         <img
           alt="bar"
           loading="lazy"
-          width="350"
+          width="500"
           height="50"
           decoding="async"
           data-nimg="1"
-          className="mt-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-700 animate-text"
+          className="mt-6"
           src={bars}
         />
+        </TextGradient>
       </span>
     </div>
   );

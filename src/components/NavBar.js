@@ -27,7 +27,9 @@ function NavBar() {
             </div>
             {/* Mobile navigation toggle */}
             <div className='flex gap-4 items-center'>
+              <Link to={'/contact'}>
               <button className='px-4 py-2 rounded-lg bg-black text-white hover:bg-white hover:shadow-xl hover:text-black transition-all duration-300 ease-in-out'>Let's Talk</button>
+              </Link>
               <button onClick={handleToggleMenu}>
                 {toggleMenu ? <CloseIcon fontSize='large' /> : <MenuIcon fontSize='large' />}
               </button>
