@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import illustrations from '../assets/image/undraw_electricity_k2ft.svg';
 import '../Animations/SlideRight.css';
+import React from 'react';
 
 const SlidingCard: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

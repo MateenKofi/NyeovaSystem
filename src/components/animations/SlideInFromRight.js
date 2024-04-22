@@ -1,23 +1,67 @@
-import React from 'react'
-import {motion} from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import React, { useEffect, useRef, useState } from 'react';
+import anime from 'animejs';
 
-const SlideInFromRight = ({children}) => {
-    const [ref,inView] = useInView({
-        triggerOnce:true,
-        threshold:0.5
-    })
+const SlideInFromRight = ({ children }) => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+
+    const observerOptions = {
+      rootMargin: '0px',
+      threshold: [0, 0.5],
+    };
+
+    // Throttle the IntersectionObserver callback
+    let throttleTimeout;
+    const handleIntersection = (entries) => {
+      if (!throttleTimeout) {
+        throttleTimeout = setTimeout(() => {
+          throttleTimeout = null;
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              anime({
+                targets: node,
+                translateX: [100, 0], // Slide in from 100px to 0px on the X-axis
+                opacity: [0, 1], // Fade in from 0 to 1
+                duration: 1000,
+                easing: 'easeInOutQuad',
+              });
+            } else {
+              setIsVisible(false);
+            }
+          });
+        }, 200); // Adjust the throttle time as needed
+      }
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    if (node) {
+      observer.observe(node);
+    }
+
+    return () => {
+      if (node) {
+        observer.unobserve(node);
+      }
+    };
+  }, []);
+
   return (
-   <motion.div
-   ref={ref}
-   initial={{x:'100%'}}
-   animate={{x:inView ? 0 : '100%'}}
-   transition={{duration:0.3}}
-   className='grid place-items-center'
-   >
-    {children}
-   </motion.div>
-  )
-}
+    <div
+      ref={ref}
+      style={{
+        opacity: 0,
+        transform: 'translateX(100px)', // Initial position off-screen to the right
+        willChange: 'opacity, transform', // Promote to its own layer for hardware acceleration
+      }}
+    >
+      {isVisible && children}
+    </div>
+  );
+};
 
-export default SlideInFromRight
+export default SlideInFromRight;

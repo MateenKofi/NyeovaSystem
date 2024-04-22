@@ -3,13 +3,14 @@ import image1 from '../assets/images/landing/1.png';
 import image2 from '../assets/images/landing/2.png';
 import image3 from '../assets/images/landing/3.png';
 import image4 from '../assets/images/landing/4.png';
-import TextAnimation from './animations/TextAnimation';
 import SlideInFromRight from './animations/SlideInFromRight';
 import SlideInFromLeft from './animations/SlideInFromLeft';
+import '../components/animations/fadeIn.css'
+import FadeIn from './animations/FadeIn';
 
 const TextImage = () => {
   return (
-    <div className="my-10 grid place-items-center">
+    <div className="my-10 mx-10 grid place-items-center">
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="flex justify-center md:w-1/2 md:hidden ">
           <SlideInFromLeft>
@@ -25,7 +26,7 @@ const TextImage = () => {
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
-            <TextAnimation>
+            <FadeIn>
               <h2 className="text-4xl font-serif py-4">
                 Elevate Your Business
               </h2>
@@ -36,7 +37,7 @@ const TextImage = () => {
                 Business Strategy that improves your targeted performance. We
                 also provide coaching to implement business strategies.
               </p>
-            </TextAnimation>
+            </FadeIn>
           </div>
         </div>
         <div className="hidden justify-center md:w-1/2  md:flex  overflow-hidden">
@@ -68,7 +69,7 @@ const TextImage = () => {
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
-            <TextAnimation>
+            <FadeIn>
               <h4 className="text-4xl font-serif py-4">Conception</h4>
               <p>
                 Since conception, we have had a host of applications in
@@ -79,7 +80,7 @@ const TextImage = () => {
                 you and your company at a fraction of the cost of maintaining a
                 full IT department.
               </p>
-            </TextAnimation>
+            </FadeIn>
           </div>
         </div>
       </div>
@@ -99,7 +100,7 @@ const TextImage = () => {
         </div>
         <div className="md:w-1/2 flex justify-center mb-28 md:mb-0">
           <div className="w-9/12">
-            <TextAnimation>
+            <FadeIn>
               <h2 className="text-4xl font-serif py-4">
                 Elevate Your Business
               </h2>
@@ -110,7 +111,7 @@ const TextImage = () => {
                 Business Strategy that improves your targeted performance. We
                 also provide coaching to implement business strategies.
               </p>
-            </TextAnimation>
+            </FadeIn>
           </div>
         </div>
         <div className="hidden justify-center md:w-1/2  md:flex">
@@ -145,7 +146,7 @@ const TextImage = () => {
             className="w-9/12"
             // style={{opacity: 0; transform: scale(0.5) ,translateZ(0)}}
           >
-            <TextAnimation>
+            <FadeIn>
               <h4 className="text-[3.4em]">Development Expertise</h4>
               <div>
                 At Nyeova Systems, we bring our world class development and
@@ -170,7 +171,7 @@ const TextImage = () => {
                   PigeonUltra App.
                 </p>
               </div>
-            </TextAnimation>
+            </FadeIn>
           </div>
         </div>
       </div>
