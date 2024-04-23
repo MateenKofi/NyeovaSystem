@@ -14,6 +14,7 @@ const Contact = () => {
               height="500"
               decoding="async"
               data-nimg="1"
+              className='rounded'
               src={image}
             />
           </div>
